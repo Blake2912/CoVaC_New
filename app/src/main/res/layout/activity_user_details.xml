@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/UserDetailspage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserDetails">
+
+    <TextView
+        android:id="@+id/UserDetailsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Details"
+        android:textColor="#100202"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062" />
+
+    <TextView
+        android:id="@+id/NameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UserDetailsView"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <TextView
+        android:id="@+id/DisplayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Here display the name fron DB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.71"
+        app:layout_constraintStart_toEndOf="@+id/NameView"
+        app:layout_constraintTop_toBottomOf="@+id/UserDetailsView"
+        app:layout_constraintVertical_bias="0.065" />
+
+    <TextView
+        android:id="@+id/PhoneNumberView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone:"
+        android:textColor="#0C0000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NameView"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <TextView
+        android:id="@+id/DisplayPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Here display the phone from DB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.773"
+        app:layout_constraintStart_toEndOf="@+id/PhoneNumberView"
+        app:layout_constraintTop_toBottomOf="@+id/DisplayName"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <TextView
+        android:id="@+id/GovtIDView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Govt ID No:"
+        android:textColor="#0B0101"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneNumberView"
+        app:layout_constraintVertical_bias="0.064" />
+
+    <TextView
+        android:id="@+id/DisplayGovtID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Here display the govtID from DB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.647"
+        app:layout_constraintStart_toEndOf="@+id/GovtIDView"
+        app:layout_constraintTop_toBottomOf="@+id/DisplayPhoneNumber"
+        app:layout_constraintVertical_bias="0.088" />
+
+    <TextView
+        android:id="@+id/FirstDoseView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Dose:"
+        android:textColor="#0B0101"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GovtIDView"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <TextView
+        android:id="@+id/DisplayFirstDose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="display the date of first dose from DB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.627"
+        app:layout_constraintStart_toEndOf="@+id/FirstDoseView"
+        app:layout_constraintTop_toBottomOf="@+id/DisplayGovtID"
+        app:layout_constraintVertical_bias="0.108" />
+
+    <TextView
+        android:id="@+id/SecondDoseView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Second Dose:"
+        android:textColor="#130202"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FirstDoseView"
+        app:layout_constraintVertical_bias="0.082" />
+
+    <TextView
+        android:id="@+id/DisplaySecondDose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="display the date of 2nd dose from DB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toEndOf="@+id/SecondDoseView"
+        app:layout_constraintTop_toBottomOf="@+id/DisplayFirstDose"
+        app:layout_constraintVertical_bias="0.088" />
+
+    <TextView
+        android:id="@+id/DoseQueryView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Have you had your first dose?"
+        android:textColor="#130F0F"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UserDetailsView"
+        app:layout_constraintVertical_bias="0.742" />
+
+    <Button
+        android:id="@+id/YesBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        app:backgroundTint="#6B9A33"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/NoBtn"
+        app:layout_constraintHorizontal_bias="0.673"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DoseQueryView"
+        app:layout_constraintVertical_bias="0.357" />
+
+    <Button
+        android:id="@+id/NoBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No"
+        app:backgroundTint="#EA1212"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DoseQueryView"
+        app:layout_constraintVertical_bias="0.357" />
+
+    <TextView
+        android:id="@+id/VaccineTypeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vaccine Type:"
+        android:textColor="#0B0101"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SecondDoseView"
+        app:layout_constraintVertical_bias="0.121" />
+
+    <TextView
+        android:id="@+id/DisplayVaccineType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Display Vccine type from DB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DisplaySecondDose"
+        app:layout_constraintVertical_bias="0.141" />
+</androidx.constraintlayout.widget.ConstraintLayout>
