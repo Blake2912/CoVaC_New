@@ -5,7 +5,8 @@
     android:id="@+id/UserDetailspage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserDetails">
+    tools:context=".UserDetails"
+    android:layout_margin="15dp">
 
     <TextView
         android:id="@+id/UserDetailsView"

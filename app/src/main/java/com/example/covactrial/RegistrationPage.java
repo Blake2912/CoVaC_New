@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 public class RegistrationPage extends AppCompatActivity {
 
-    private Button eRegisterBTN;
     private CheckBox eTermsNConditions;
 
     boolean TermsConditionsAccepted = false;
@@ -22,7 +21,7 @@ public class RegistrationPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_page);
-        eRegisterBTN = findViewById(R.id.RegistrationBTN);
+        Button eRegisterBTN = findViewById(R.id.RegistrationBTN);
         eTermsNConditions = findViewById(R.id.TermsAndConditions);
 
         eTermsNConditions.setOnClickListener(new View.OnClickListener() {

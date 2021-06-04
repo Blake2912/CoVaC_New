@@ -5,7 +5,8 @@
     android:id="@+id/RegistrationPage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrationPage">
+    tools:context=".RegistrationPage"
+    android:layout_margin="15dp">
 
     <TextView
         android:id="@+id/brandView"
