@@ -5,21 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SecondDosePage"
-    android:layout_margin="15dp">
-
+    android:background="@color/black">
     <TextView
         android:id="@+id/SecondDoseView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Second Dose Schedule"
+        android:textColor="#ffff"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.422"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.063"
-        android:textColor="@color/black"/>
+        app:layout_constraintVertical_bias="0.118" />
 
     <EditText
         android:id="@+id/InputPinNoSecondDose"
@@ -28,6 +28,7 @@
         android:ems="10"
         android:hint="Pin Code:"
         android:inputType="number"
+        android:textColorHint="#ffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,23 +40,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Date for Second Dose:"
         android:inputType="date"
+        android:textColorHint="#ffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/InputPinNoSecondDose"
-        app:layout_constraintVertical_bias="0.129"
-        android:hint="Date for Second Dose:" />
+        app:layout_constraintVertical_bias="0.116" />
 
     <Button
         android:id="@+id/CheckAvailabilityForSecondDoseBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#ed7d1a"
+        android:text="Check Availability"
+        android:textColor="#ffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SecondDoseDateEdit"
-        android:text="Check Availability"/>
+        app:layout_constraintVertical_bias="0.44" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

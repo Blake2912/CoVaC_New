@@ -5,28 +5,29 @@
     android:id="@+id/LoginPage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#000308">
 
     <TextView
         android:id="@+id/BrandView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="COVAC"
-        android:textColor="#0B0B0B"
+        android:textColor="#ffff"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/LogintextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.589" />
+        app:layout_constraintVertical_bias="0.589"/>
 
     <TextView
         android:id="@+id/LogintextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
-        android:textColor="#000000"
+        android:textColor="#ffff"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,7 +49,9 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LogintextView"
-        app:layout_constraintVertical_bias="0.203" />
+        app:layout_constraintVertical_bias="0.203"
+        android:textColorHint="#ffff"
+        android:textColor="#ffff"/>
 
     <EditText
         android:id="@+id/PasswordInput"
@@ -62,33 +65,38 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PhoneNoInput"
-        app:layout_constraintVertical_bias="0.126" />
+        app:layout_constraintVertical_bias="0.126"
+        android:textColorHint="#ffff"
+        android:textColor="#ffff"/>
 
     <Button
         android:id="@+id/RegisterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register"
+        android:textColor="@color/black"
         android:textSize="20sp"
-        app:backgroundTint="#DA1111"
+        app:backgroundTint="#eeff36"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintHorizontal_bias="0.19"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PasswordInput"
-        app:layout_constraintVertical_bias="0.393" />
+        app:layout_constraintVertical_bias="0.386" />
 
     <Button
         android:id="@+id/LoginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#58e026"
         android:text="Login"
+        android:textColor="@color/black"
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toEndOf="@+id/RegisterButton"
         app:layout_constraintTop_toBottomOf="@+id/PasswordInput"
-        app:layout_constraintVertical_bias="0.389" />
+        app:layout_constraintVertical_bias="0.386" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
