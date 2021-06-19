@@ -12,3 +12,5 @@ public class SecondDosePage extends AppCompatActivity {
         setContentView(R.layout.activity_second_dose_page);
     }
 }
+
+// Directly use the pin code with a variable and call the API

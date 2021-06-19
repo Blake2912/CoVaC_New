@@ -54,12 +54,12 @@
         android:textColor="#ffff"/>
 
     <EditText
-        android:id="@+id/DOBInput"
+        android:id="@+id/YearOfBirthInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Date Of Birth"
-        android:inputType="date"
+        android:hint="Year of Birth"
+        android:inputType="number"
         android:textColorHint="#ffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,12 +81,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DOBInput"
+        app:layout_constraintTop_toBottomOf="@+id/YearOfBirthInput"
         app:layout_constraintVertical_bias="0.045"
         android:textColor="#ffff"/>
 
     <EditText
-        android:id="@+id/GovtIDinput"
+        android:id="@+id/GovtIDInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -113,7 +113,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/GovtIDinput"
+        app:layout_constraintTop_toBottomOf="@+id/GovtIDInput"
         app:layout_constraintVertical_bias="0.075"
         android:textColor="#ffff"/>
 

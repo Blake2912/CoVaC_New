@@ -7,13 +7,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.QuickContactBadge;
-import android.widget.TextView;
+import android.widget.EditText;
 import android.widget.Toast;
+
 
 public class RegistrationPage extends AppCompatActivity {
 
+
+    private EditText eName;
+    private EditText eYearOfBirth;
+    private EditText ePhone;
+    private EditText eGovtId;
+    private EditText ePassword;
+    private EditText eConfirmPassword;
     private CheckBox eTermsNConditions;
+    Button eRegisterBTN;
 
     boolean TermsConditionsAccepted = false;
 
@@ -21,8 +29,17 @@ public class RegistrationPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_page);
-        Button eRegisterBTN = findViewById(R.id.RegistrationBTN);
+
+        // Linking of all text boxes with the UI
+        eName = findViewById(R.id.NameInputOfPatient);
+        eYearOfBirth = findViewById(R.id.YearOfBirthInput);
+        ePhone = findViewById(R.id.PhoneNoInput);
+        eGovtId = findViewById(R.id.GovtIDInput);
+        ePassword = findViewById(R.id.PasswordInput);
+        eConfirmPassword = findViewById(R.id.PasswordConfirm);
+        eRegisterBTN = findViewById(R.id.RegistrationBTN);
         eTermsNConditions = findViewById(R.id.TermsAndConditions);
+
 
         eTermsNConditions.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,7 +52,6 @@ public class RegistrationPage extends AppCompatActivity {
                 }
             }
         });
-
 
         eRegisterBTN.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,5 +67,4 @@ public class RegistrationPage extends AppCompatActivity {
             }
         });
     }
-
 }
