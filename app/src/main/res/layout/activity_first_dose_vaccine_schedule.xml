@@ -22,36 +22,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.15" />
 
-    <EditText
-        android:id="@+id/InputPinNo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Pin Code:"
-        android:textColorHint="#ffff"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FirstDoseScheduleView"
-        app:layout_constraintVertical_bias="0.118" />
-
-    <EditText
-        android:id="@+id/InputFirstDoseDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Date for First Dose: "
-        android:textColorHint="#ffff"
-        android:inputType="date"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputPinNo"
-        app:layout_constraintVertical_bias="0.1" />
-
     <Button
         android:id="@+id/ContFirstReg"
         android:layout_width="wrap_content"
@@ -63,5 +33,38 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/InputFirstDoseDate"
-        app:layout_constraintVertical_bias="0.452" />
+        app:layout_constraintVertical_bias="0.347" />
+
+    <EditText
+        android:id="@+id/InputPinNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#ffff"
+        android:hint="Pin Code:"
+        android:textColorHint="#ffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FirstDoseScheduleView"
+        app:layout_constraintVertical_bias="0.156" />
+
+    <EditText
+        android:id="@+id/InputFirstDoseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#ffff"
+        android:hint="Date of First Dose:"
+        android:textColorHint="#ffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InputPinNo"
+        app:layout_constraintVertical_bias="0.203" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

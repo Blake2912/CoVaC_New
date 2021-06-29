@@ -33,23 +33,24 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintHorizontal_bias="0.097"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/UserDetailsView"
-        app:layout_constraintVertical_bias="0.049"/>
+        app:layout_constraintVertical_bias="0.095" />
 
     <TextView
         android:id="@+id/DisplayName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Here display the name fron DB"
+        android:text="Name:"
         android:textColor="#ffff"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.71"
+        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toEndOf="@+id/NameView"
         app:layout_constraintTop_toBottomOf="@+id/UserDetailsView"
-        app:layout_constraintVertical_bias="0.065"/>
+        app:layout_constraintVertical_bias="0.095" />
 
     <TextView
         android:id="@+id/PhoneNumberView"
@@ -61,23 +62,24 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintHorizontal_bias="0.099"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NameView"
-        app:layout_constraintVertical_bias="0.053"/>
+        app:layout_constraintVertical_bias="0.077" />
 
     <TextView
         android:id="@+id/DisplayPhoneNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Phone"
         android:textColor="#ffff"
-        android:text="Here display the phone from DB"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.773"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toEndOf="@+id/PhoneNumberView"
         app:layout_constraintTop_toBottomOf="@+id/DisplayName"
-        app:layout_constraintVertical_bias="0.068"/>
+        app:layout_constraintVertical_bias="0.077" />
 
     <TextView
         android:id="@+id/GovtIDView"
@@ -89,23 +91,24 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PhoneNumberView"
-        app:layout_constraintVertical_bias="0.064"/>
+        app:layout_constraintVertical_bias="0.091" />
 
     <TextView
         android:id="@+id/DisplayGovtID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="GovtID"
         android:textColor="#ffff"
-        android:text="Here display the govtID from DB"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.647"
+        app:layout_constraintHorizontal_bias="0.346"
         app:layout_constraintStart_toEndOf="@+id/GovtIDView"
         app:layout_constraintTop_toBottomOf="@+id/DisplayPhoneNumber"
-        app:layout_constraintVertical_bias="0.088"/>
+        app:layout_constraintVertical_bias="0.091" />
 
     <TextView
         android:id="@+id/FirstDoseView"
@@ -117,23 +120,24 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/GovtIDView"
-        app:layout_constraintVertical_bias="0.058"/>
+        app:layout_constraintVertical_bias="0.093" />
 
     <TextView
         android:id="@+id/DisplayFirstDose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Display the date of first dose from DB"
+        android:text="First Dose"
         android:textColor="#ffff"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toEndOf="@+id/FirstDoseView"
         app:layout_constraintTop_toBottomOf="@+id/DisplayGovtID"
-        app:layout_constraintVertical_bias="0.071"/>
+        app:layout_constraintVertical_bias="0.097" />
 
     <TextView
         android:id="@+id/SecondDoseView"
@@ -145,23 +149,24 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/FirstDoseView"
-        app:layout_constraintVertical_bias="0.081" />
+        app:layout_constraintVertical_bias="0.117" />
 
     <TextView
         android:id="@+id/DisplaySecondDose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="display the date of 2nd dose from DB"
+        android:text="Second Dose"
         android:textColor="#ffff"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.33"
         app:layout_constraintStart_toEndOf="@+id/SecondDoseView"
         app:layout_constraintTop_toBottomOf="@+id/DisplayFirstDose"
-        app:layout_constraintVertical_bias="0.103" />
+        app:layout_constraintVertical_bias="0.111" />
 
     <TextView
         android:id="@+id/DoseQueryView"
@@ -214,21 +219,21 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SecondDoseView"
-        app:layout_constraintVertical_bias="0.095"/>
+        app:layout_constraintVertical_bias="0.135" />
 
     <TextView
         android:id="@+id/DisplayVaccineType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Display Vccine type from DB"
+        android:text="Display Vaccine type from DB"
         android:textColor="#ffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.795"
+        app:layout_constraintHorizontal_bias="0.846"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DisplaySecondDose"
-        app:layout_constraintVertical_bias="0.124" />
+        app:layout_constraintVertical_bias="0.164" />
 </androidx.constraintlayout.widget.ConstraintLayout>

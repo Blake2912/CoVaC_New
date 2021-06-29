@@ -37,19 +37,35 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,"Please enter the details properly",Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    isValid = Validate(inputPhone,inputPassword);
-                    if(!isValid){
-                        counter--;
-                        Toast.makeText(MainActivity.this,"Incorrect Credentials,try again! You have these many tries "+ counter,Toast.LENGTH_SHORT).show();
-                        if(counter == 0){
-                            eLoginButton.setEnabled(false);
+                    UserDetailsBackEndDBDatabase userDetailsBackEndDBDatabase = UserDetailsBackEndDBDatabase.getUserDetailsBackEndDBDatabase(getApplicationContext());
+                    final UserDetailsBackEndDBDao userDetailsBackEndDBDao = userDetailsBackEndDBDatabase.userDetailsBackEndDBDao();
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            UserDetailsBackEndDB userDetailsBackEndDB = userDetailsBackEndDBDao.login(inputPhone,inputPassword);
+                            if(userDetailsBackEndDB == null){
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        Toast.makeText(MainActivity.this,"Incorrect Credentials,try again!",Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+                            else{
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        String phone1 = userDetailsBackEndDB.PhoneNumber;
+                                        String password1 = userDetailsBackEndDB.Password;
+                                        Toast.makeText(MainActivity.this,"Login Success",Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(MainActivity.this,UserDetails.class)
+                                                .putExtra("phone_number",phone1)
+                                                .putExtra("password",password1));
+                                    }
+                                });
+                            }
                         }
-                    }
-                    else{
-                        // Code to go to the user page
-                        Toast.makeText(MainActivity.this,"Login Successful",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(MainActivity.this,UserDetails.class));
-                    }
+                    }).start();
                 }
             }
         });
@@ -62,12 +78,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(GoToRegistration);
             }
         });
-    }
-
-    boolean Validate(String Phone_input, String Password_input){
-        if(Phone_input.equals("123456789") && Password_input.equals("Password")){
-            return true;
-        }
-        return false;
     }
 }
