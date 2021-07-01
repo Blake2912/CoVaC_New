@@ -31,25 +31,31 @@ public class SecondDosePage extends AppCompatActivity {
         eCheckAvailability2BTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        UserDetailsBackEndDB userDetailsBackEndDB = userDetailsBackEndDBDao.findName(phone_number,password_temp);
-                        String eTempDate = eSecondDoseDateIp.getText().toString();
-                        String eTempPin = ePinCode.getText().toString();
-                        userDetailsBackEndDB.setSecond_Dose_Date(eTempDate);
-                        userDetailsBackEndDB.setPinCode(eTempPin);
-                        userDetailsBackEndDBDao.update(userDetailsBackEndDB);
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                Toast.makeText(SecondDosePage.this,"Updated in database!",Toast.LENGTH_SHORT).show();
-                                // Call intent here
-                            }
-                        });
+                String eTempDate = eSecondDoseDateIp.getText().toString();
+                String eTempPin = ePinCode.getText().toString();
+                if(eTempDate.isEmpty() || eTempPin.isEmpty()){
+                    Toast.makeText(SecondDosePage.this,"Please Enter all details properly!",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            UserDetailsBackEndDB userDetailsBackEndDB = userDetailsBackEndDBDao.findName(phone_number,password_temp);
 
-                    }
-                }).start();
+                            userDetailsBackEndDB.setSecond_Dose_Date(eTempDate);
+                            userDetailsBackEndDB.setPinCode(eTempPin);
+                            userDetailsBackEndDBDao.update(userDetailsBackEndDB);
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(SecondDosePage.this,"Updated in database!",Toast.LENGTH_SHORT).show();
+                                    // Call intent here
+                                }
+                            });
+
+                        }
+                    }).start();
+                }
             }
         });
     }
