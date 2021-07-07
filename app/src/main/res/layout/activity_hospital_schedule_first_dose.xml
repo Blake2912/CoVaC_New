@@ -25,36 +25,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022" />
 
-    <ScrollView
-        android:id="@+id/HospitalDetailsView"
-        android:layout_width="369dp"
-        android:layout_height="348dp"
-        android:layout_margin="25dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/HospitalTextView"
-        app:layout_constraintVertical_bias="0.0">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="25dp"
-            android:orientation="vertical">
-            <CheckBox
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="Test Hospital name and ID and Vaccine type"/>
-        </LinearLayout>
-    </ScrollView>
-
     <Button
         android:id="@+id/DisplayHospitalBTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="50sp"
+        android:layout_marginTop="15dp"
         android:backgroundTint="#33c229"
         android:text="DISPLAY AVAILABLE HOSPITALS"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -81,9 +57,11 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
+        android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="50sp"
+        android:layout_marginBottom="25dp"
         android:hint="Enter the hospital id:"
         android:textColor="#ffff"
         android:textColorHint="#ffff"
@@ -93,4 +71,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/HospitalTextView"
         app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerViewFirst"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HospitalTextView"
+        app:layout_constraintVertical_bias="0.026" />
 </androidx.constraintlayout.widget.ConstraintLayout>
