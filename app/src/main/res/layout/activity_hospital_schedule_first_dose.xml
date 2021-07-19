@@ -56,26 +56,10 @@
         app:layout_constraintTop_toBottomOf="@+id/DisplayHospitalBTN"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="50sp"
-        android:layout_marginBottom="25dp"
-        android:hint="Enter the hospital id:"
-        android:textColor="#ffff"
-        android:textColorHint="#ffff"
-        app:layout_constraintBottom_toTopOf="@+id/DisplayHospitalBTN"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/HospitalTextView"
-        app:layout_constraintVertical_bias="1.0" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerViewFirst"
         android:layout_width="0dp"
-        android:layout_height="350dp"
+        android:layout_height="450dp"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="5dp"

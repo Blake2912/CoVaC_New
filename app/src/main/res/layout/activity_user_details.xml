@@ -228,12 +228,13 @@
         android:id="@+id/DisplayVaccineType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Display Vaccine type from DB"
+        android:text="Vaccine type"
         android:textColor="#ffff"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintHorizontal_bias="0.716"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DisplaySecondDose"
-        app:layout_constraintVertical_bias="0.164" />
+        app:layout_constraintVertical_bias="0.132" />
 </androidx.constraintlayout.widget.ConstraintLayout>

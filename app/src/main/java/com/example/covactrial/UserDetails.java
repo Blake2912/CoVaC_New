@@ -11,7 +11,12 @@ import android.widget.TextView;
 public class UserDetails extends AppCompatActivity {
     private Button eNoButton;
     private Button eYesButton;
-    private TextView eDisplayName,eDisplayPhoneNo,eDisplayGovtId,eDisplayFirstDose,eDisplaySecondDose,eDisplayVaccineType;
+    private TextView eDisplayName,eDisplayPhoneNo,eDisplayGovtId,eDisplayFirstDose,eDisplaySecondDose,eDisplayVaccineType,eDoseQuery;
+    String first_dose_date;
+    String second_dose_date;
+    private Boolean Vaccinated = false;
+    String phone_number;
+    String password_temp;
 
 
     @Override
@@ -26,9 +31,10 @@ public class UserDetails extends AppCompatActivity {
         eDisplayFirstDose = findViewById(R.id.DisplayFirstDose);
         eDisplaySecondDose = findViewById(R.id.DisplaySecondDose);
         eDisplayVaccineType = findViewById(R.id.DisplayVaccineType);
+        eDoseQuery = findViewById(R.id.DoseQueryView);
 
-        String phone_number = getIntent().getStringExtra("phone_number");
-        String password_temp = getIntent().getStringExtra("password");
+        phone_number = getIntent().getStringExtra("phone_number");
+        password_temp = getIntent().getStringExtra("password");
 
         UserDetailsBackEndDBDatabase userDetailsBackEndDBDatabase = UserDetailsBackEndDBDatabase.getUserDetailsBackEndDBDatabase(getApplicationContext());
         final UserDetailsBackEndDBDao userDetailsBackEndDBDao = userDetailsBackEndDBDatabase.userDetailsBackEndDBDao();
@@ -37,8 +43,8 @@ public class UserDetails extends AppCompatActivity {
             public void run() {
                 UserDetailsBackEndDB userDetailsBackEndDB = userDetailsBackEndDBDao.findName(phone_number,password_temp);
                 String tempName = userDetailsBackEndDB.getName();
-                String first_dose_date = userDetailsBackEndDB.getFirst_Dose_Date();
-                String second_dose_date = userDetailsBackEndDB.getSecond_Dose_Date();
+                first_dose_date = userDetailsBackEndDB.getFirst_Dose_Date();
+                second_dose_date = userDetailsBackEndDB.getSecond_Dose_Date();
                 String vaccine_type_temp = userDetailsBackEndDB.getVaccineType();
                 runOnUiThread(new Runnable() {
                     @Override
@@ -51,6 +57,36 @@ public class UserDetails extends AppCompatActivity {
                         eDisplayVaccineType.setText(vaccine_type_temp);
                     }
                 });
+            }
+        }).start();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                if(FirstDoseDone()){
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            eNoButton.setEnabled(false);
+                        }
+                    });
+                }
+            }
+        }).start();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                if(isVaccinated()){
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            eNoButton.setVisibility(View.GONE);
+                            eYesButton.setVisibility(View.GONE);
+                            eDoseQuery.setVisibility(View.GONE);
+                        }
+                    });
+                }
             }
         }).start();
 
@@ -98,5 +134,27 @@ public class UserDetails extends AppCompatActivity {
             }
         });
 
+    }
+    Boolean isVaccinated(){
+        UserDetailsBackEndDBDatabase userDetailsBackEndDBDatabase = UserDetailsBackEndDBDatabase.getUserDetailsBackEndDBDatabase(getApplicationContext());
+        final UserDetailsBackEndDBDao userDetailsBackEndDBDao = userDetailsBackEndDBDatabase.userDetailsBackEndDBDao();
+        UserDetailsBackEndDB userDetailsBackEndDB = userDetailsBackEndDBDao.findName(phone_number,password_temp);
+        if(userDetailsBackEndDB.getSecond_Dose_Date() == null){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    Boolean FirstDoseDone(){
+        UserDetailsBackEndDBDatabase userDetailsBackEndDBDatabase = UserDetailsBackEndDBDatabase.getUserDetailsBackEndDBDatabase(getApplicationContext());
+        final UserDetailsBackEndDBDao userDetailsBackEndDBDao = userDetailsBackEndDBDatabase.userDetailsBackEndDBDao();
+        UserDetailsBackEndDB userDetailsBackEndDB = userDetailsBackEndDBDao.findName(phone_number,password_temp);
+        if(userDetailsBackEndDB.getFirst_Dose_Date() == null){
+            return false;
+        }
+        else{
+            return true;
+        }
     }
 }

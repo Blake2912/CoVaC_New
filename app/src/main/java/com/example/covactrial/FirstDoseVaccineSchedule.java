@@ -53,8 +53,10 @@ public class FirstDoseVaccineSchedule extends AppCompatActivity {
                                 public void run() {
                                     Toast.makeText(FirstDoseVaccineSchedule.this,"Updated in database!",Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(FirstDoseVaccineSchedule.this,HospitalScheduleFirstDose.class)
-                                            .putExtra("Phone_number1",TempPhone)
-                                            .putExtra("Password1",TempPassword));
+                                            .putExtra("Phone_number2",TempPhone)
+                                            .putExtra("Password2",TempPassword)
+                                            .putExtra("Pin_code1",eTempPin)
+                                            .putExtra("DateFirst",eTempDate));
                                 }
                             });
                         }
